@@ -42,6 +42,18 @@ namespace GodsUnchainedCardsComparer.Models
         public string live { get; set; }
         public string art_id { get; set; }
         public string lib_id { get; set; }
+
+        public DateTime? lastSold { get; set; }
+        public string imageUrl { get; set; }
+        public double? ETHprice { get; set; }
+        public double? ETHpriceAverage24 { get; set; }
+        public double? GODSprice { get; set; }
+        public double? GODSpriceAverage24 { get; set; }
+        public double? ETHpriceUSD { get; set; }
+        public double? GODSpriceUSD { get; set; }
+        public int numberOfETHsales { get; set; }
+        public int numberOfGODSsales { get; set; }
+        public double? diffrenceInPrice { get; set; }
     }
 
     public class Tribe

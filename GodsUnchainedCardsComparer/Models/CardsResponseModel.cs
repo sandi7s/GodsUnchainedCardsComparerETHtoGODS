@@ -36,7 +36,7 @@ namespace GodsUnchainedCardsComparer.Models
         public int decimals { get; set; }
 
         //USER ADDED
-        public double? price
+        public double price
         {
             get
             {
@@ -44,7 +44,7 @@ namespace GodsUnchainedCardsComparer.Models
                 {
                     return 0;
                 }
-                return quantity / Math.Pow(10, decimals);
+                return (double)quantity / Math.Pow(10, decimals);
             }
         }
     }

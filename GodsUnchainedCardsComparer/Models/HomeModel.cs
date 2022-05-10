@@ -7,7 +7,8 @@ namespace GodsUnchainedCardsComparer.Models
 {
     public class HomeModel
     {
-        //public List<Card> Cards { get; set; }
-        public CardsResponseModel ApiResults { get; set; }
+        public List<Card> CardsLowerETH { get; set; }
+        public List<Card> CardsLowerGods { get; set; }
+        //public CardsResponseModel ApiResults { get; set; }
     }
 }

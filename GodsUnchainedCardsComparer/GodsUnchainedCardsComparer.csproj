@@ -157,6 +157,7 @@
     </Compile>
     <Compile Include="Models\Card.cs" />
     <Compile Include="Models\CardsResponseModel.cs" />
+    <Compile Include="Models\CoinGeckoPriceCheckResult.cs" />
     <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
