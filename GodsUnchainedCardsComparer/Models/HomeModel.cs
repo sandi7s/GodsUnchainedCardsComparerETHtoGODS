@@ -9,6 +9,7 @@ namespace GodsUnchainedCardsComparer.Models
     {
         public List<Card> CardsLowerETH { get; set; }
         public List<Card> CardsLowerGods { get; set; }
-        //public CardsResponseModel ApiResults { get; set; }
+        public List<Card> CardsLowerETHExpensive { get; set; }
+        public List<Card> CardsLowerGodsExpensive { get; set; }
     }
 }

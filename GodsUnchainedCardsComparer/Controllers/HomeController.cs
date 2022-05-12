@@ -72,6 +72,8 @@ namespace GodsUnchainedCardsComparer.Controllers
 
             homeModel.CardsLowerETH = cards.Where(e => e.diffrenceInPrice != null).OrderByDescending(e => e.diffrenceInPrice).Take(90).ToList();
             homeModel.CardsLowerGods = cards.Where(e => e.diffrenceInPrice != null).OrderBy(e => e.diffrenceInPrice).Take(90).ToList();
+            homeModel.CardsLowerETHExpensive = cards.Where(e => e.diffrenceInPrice != null && e.ETHpriceUSD > 0.5).OrderByDescending(e => e.diffrenceInPrice).Take(90).ToList();
+            homeModel.CardsLowerGodsExpensive = cards.Where(e => e.diffrenceInPrice != null && e.GODSpriceUSD > 0.5).OrderBy(e => e.diffrenceInPrice).Take(90).ToList();
 
             return View(homeModel);
         }

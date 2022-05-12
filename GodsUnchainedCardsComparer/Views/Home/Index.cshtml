@@ -69,6 +69,72 @@
             </div>
         }
     </div>
+    <hr />
+    <div class="row mb-10" style="background-color:hsla(100, 100%, 50%, 0.3);">
+        <h2>LOWER ETH PRICE</h2>
+        @foreach (var card in Model.CardsLowerETHExpensive)
+        {
+            <div class="col-md-2">
+                <h2>@card.name</h2>
+                <p><img src="@card.imageUrl" class="img-fluid" alt="@card.name"></p>
+                <p>
+                    <br />
+                    ETH price last sold: @(card.ETHprice?.ToString("0.##################"))
+                    <br />
+                    ETH price average: @(card.ETHpriceAverage24?.ToString("0.##################"))
+                    <br />
+                    GODS price last sold: @card.GODSprice
+                    <br />
+                    GODS price average: @card.GODSpriceAverage24
+                    <br />
+                    Number of ETH sales last 24h: @card.numberOfETHsales
+                    <br />
+                    Number of GODS sales last 24h: @card.numberOfGODSsales
+                    <br />
+                    <br />
+                    ETH USD: @card.ETHpriceUSD
+                    <br />
+                    GODS USD: @card.GODSpriceUSD
+                    <br />
+                    <br />
+                    Difference in price: @card.diffrenceInPrice %
+                </p>
+            </div>
+        }
+    </div>
+    <hr />
+    <div class="row" style="background-color:hsla(12, 100%, 50%, 0.3);">
+        <h2>LOWER GODS PRICE</h2>
+        @foreach (var card in Model.CardsLowerGodsExpensive)
+        {
+            <div class="col-md-2">
+                <h2>@card.name</h2>
+                <p><img src="@card.imageUrl" class="img-fluid" alt="@card.name"></p>
+                <p>
+                    <br />
+                    ETH price last sold: @(card.ETHprice?.ToString("0.##################"))
+                    <br />
+                    ETH price average: @(card.ETHpriceAverage24?.ToString("0.##################"))
+                    <br />
+                    GODS price last sold: @card.GODSprice
+                    <br />
+                    GODS price average: @card.GODSpriceAverage24
+                    <br />
+                    Number of ETH sales last 24h: @card.numberOfETHsales
+                    <br />
+                    Number of GODS sales last 24h: @card.numberOfGODSsales
+                    <br />
+                    <br />
+                    ETH USD: @card.ETHpriceUSD
+                    <br />
+                    GODS USD: @card.GODSpriceUSD
+                    <br />
+                    <br />
+                    Difference in price: @card.diffrenceInPrice %
+                </p>
+            </div>
+        }
+    </div>
 </section>
 
 @*<div class="jumbotron">
