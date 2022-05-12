@@ -78,6 +78,26 @@ namespace GodsUnchainedCardsComparer.Controllers
             return View(homeModel);
         }
 
+        public ActionResult User()
+        {
+            var client = new RestClient("https://api.x.immutable.com/v1");
+
+            //var request = new RestRequest("/orders?status=filled&page_size=500&sell_token_address=0xacb3c6a43d15b907e8433077b6d38ae40936fe2c", Method.GET);
+            var request = new RestRequest("/orders?status=filled&page_size=500&user=0xB9a24232Ae4BfD9DfE88fe000f9109e9b47541DE", Method.GET);
+
+            var responseData = client.Execute(request);
+
+            var res = JsonConvert.DeserializeObject<CardsResponseModel>(responseData.Content);
+
+            //foreach (var item in res.result)
+            //{
+            //    item.buy.data.price = 
+            //}
+            //0xacb3c6a43d15b907e8433077b6d38ae40936fe2c gods cards adress
+
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
